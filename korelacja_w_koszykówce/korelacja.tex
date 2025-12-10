@@ -1,0 +1,101 @@
+\documentclass[landscape,11pt]{beamer}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts, amssymb, amsthm}
+\usepackage{hyperref}
+\usepackage{pgf,xcolor}
+\usetheme{Madrid} 
+\usecolortheme{rose}
+\useoutertheme{default}
+\useinnertheme{default}
+\usefonttheme{default}
+\title[Korelacja między liczbą fauli przeciwnika a liczbą 
+oddanych rzutów osobistych]{Korelacja między liczbą fauli przeciwnika a liczbą 
+oddanych rzutów osobistych}
+\author[Dawid Buler]{Dawid Buler}
+\institute[]{nr albumu 176551\\
+Matematyka rok 1 semestr 1}
+\date{\today}
+\begin{document}
+\frame[plain]{\titlepage}
+\begin{frame}[plain]{Dane}
+\begin{figure}
+\begin{columns}
+    \begin{column}{0.6\textwidth}
+    \centering
+        \includegraphics[width=0.6\linewidth]{dane.png}
+        \caption{Źródło:\\
+        \href{https://www.nba.com/team/1610612755/schedule}{https://www.nba.com/team/1610612755/schedule}}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+    \centering
+        Tabelka obok przedstawia dane z ostatnich 20 spotkań drużyny NBA.
+        Opisane obok dane to faule przeciwników($x_i$) oraz rzuty osobiste($y_i$). Przeanalizujmy czy istenije korelacja między liczbą fauli przeciwników a liczbą rzutów osobistych.
+    \end{column}
+\end{columns}
+\end{figure}
+\end{frame}
+\begin{frame}{Wykres punktów z doświadczenia}
+    \begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{wyk1.png}
+\end{figure}
+\end{frame}
+\begin{frame}{Konieczne obliczenia}
+    \begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{obli.png}
+    \caption{Konieczne obliczenia do przeprowadzenia analizy}
+\end{figure}
+\end{frame}
+\begin{frame}{Dalsze obliczenia}
+\begin{columns}
+\begin{column}{0.3\textwidth}
+    \begin{figure}
+    \centering
+    \includegraphics[width=0.7\linewidth]{dobli.png}
+    \caption{Dalsze obliczenia}
+\end{figure}
+\end{column}
+\begin{column}{0.6\textwidth}
+Współczynnik korelacji $r$ wynosi $0,70$ oznacza to silną korelacje. 
+$$-S_xS_y \leq S_{xy} \leq S_xS_y$$
+$$-11,96 \leq 8,40 \leq 11,96$$
+Siłę korelacji możemy stwierdzić ponieważ nasze $S_{xy}$ jest blisko prawego końca przedziału a więc związek funkcyjny jest dodatni.\\
+Współczynnik determinacji, czyli $R^2$ wynosi 51\%. Oznacza to słabe dopasowanie.
+\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}{Predykcja dla czterech wybranych wartości cechy x}
+\centering $y=0,80+1,27x$ prosta regresji\\
+($x$-liczba fauli drużyny przeciwnej )
+    \begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{pro.png}
+    \caption{Tabelka z prognozą}\\
+\end{figure}
+\end{frame}
+\subsection{Wykres punktów z doświadczenia z prostą regresji}
+\begin{frame}{Wykres punktów z doświadczenia z prostą regresji}
+    \begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{wyk2.png}
+\end{figure}
+\end{frame}
+\subsection{Wykres rozkładu reszt}
+\begin{frame}{Wykres rozkładu reszt}
+    \begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{wyk3.png}
+\end{figure}
+\end{frame}
+\section{Podsumowanie}
+\begin{frame}{Podsumowanie}
+\centering
+\begin{enumerate}
+\item Korelacja badanego zjawiska jest silna oraz dodatnia. Świadczy to zatem o zależności która jest następujaca : im więcej fauli przeciwnej drużyny tym więcej oddanych rzutów osobistych. 
+\item Po wyliczeniu współczynnika determinacji jesteśmy w stanie stwierdzić, iż dopasownie modelu jest słabe.
+\item Odchylenie standardowe składnika resztowego wynosi $2,995$ co również oznacza o słabym dopasowaniu modelu.
+\end{enumerate}
+    \end{frame}
+\end{document}
